@@ -23,7 +23,7 @@ public class TamagotchiService {
     private final ScheduledExecutorService ses;
 
     public TamagotchiService(Tamagotchi tamagotchi) {
-        this.es = Executors.newCachedThreadPool();
+        this.es = Executors.newSingleThreadExecutor();
         this.ses = Executors.newScheduledThreadPool(1);
         this.tamagotchi = tamagotchi;
     }
